@@ -1,0 +1,9 @@
+<h1>Total Price: {{ totalPrice }}</h1>
+<br>
+<br>
+<hr>
+<h2>App grid component</h2>
+<app-product-grid [products]="products" (delete)="onDelete($event)"></app-product-grid>
+<hr>
+<h2>App List component</h2>
+<app-product-list [products]="products" (delete)="onDelete($event)"></app-product-list>
