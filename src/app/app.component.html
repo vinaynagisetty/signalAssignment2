@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data()">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="selectItem(item)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-edit-form *ngIf="selectedItem" [item]="selectedItem"></app-edit-form>
+</div>
